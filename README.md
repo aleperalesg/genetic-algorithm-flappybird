@@ -1,4 +1,4 @@
-Evolving a Neural Network with a Genetic Algorithm to Play Flappy Bird. 
+# Evolving a Neural Network with a Genetic Algorithm to Play Flappy Bird. 
 A population of 100 neural networks is evolved over generations, with each network representing a potential player. The networks use a sigmoid activation function in the output layer.
 Each network receives four inputs extracted from the game environment:
 -Vertical coordinate of the player
