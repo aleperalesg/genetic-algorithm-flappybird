@@ -17,8 +17,6 @@ Operators used:
 
 -Mutation: 30%
 
--Replication: 0%
-
 The selection mechanism is tournament selection with a tournament size of 3. 
 The following GIF shows the **optimization process of the MLP population** over generations using a genetic algorithm.  
 Each individual represents a neural network trying to improve its performance in the Flappy Bird environment:
