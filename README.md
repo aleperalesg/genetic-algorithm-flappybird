@@ -3,15 +3,20 @@ A population of 100 neural networks is evolved over generations, with each netwo
 Each network receives four inputs extracted from the game environment: 
 
 -Vertical coordinate of the player
+
 -Vertical velocity of the player
+
 -Horizontal distance to the nearest obstacle
+
 -Vertical position of the obstacle gap
 
 The MLP outputs a value between 0 and 1. If the value exceeds 0.5, the player jumps. The GA optimizes the networks based on the score achieved by each individual.
 Operators used:
 
 -Crossover: 70%
+
 -Mutation: 30%
+
 -Replication: 0%
 
 The selection mechanism is tournament selection with a tournament size of 3. 
