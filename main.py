@@ -74,13 +74,14 @@ while gen < generations:
 
     pil_frames = [Image.fromarray(frame.astype("uint8"), "RGB") for frame in frames]
 
-    # Guardar como GIF animado
+    ## Save gif
     pil_frames[0].save(
         "output.gif",
         save_all=True,
-        append_images=pil_frames[1:],  # los demás frames
-        duration=40,  # duración de cada frame en ms (40ms ≈ 25 fps)
-        loop=0        # 0 significa bucle infinito
+        append_images=pil_frames[1:],  
+        duration=40,  
+        loop=0        
     )
+
 
 
