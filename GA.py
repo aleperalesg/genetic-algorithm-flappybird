@@ -28,9 +28,9 @@ def create_mlp():
 
     ## set model
     model = models.Sequential()
-    model.add(layers.Input(shape=(4,)))      # Capa de entrada
-    #model.add(layers.Dense(5, activation='relu'))  # Capa oculta
-    model.add(layers.Dense(1, activation='sigmoid')) # Capa de salida
+    model.add(layers.Input(shape=(4,)))      # input layer
+    #model.add(layers.Dense(5, activation='relu'))  # hidden layer
+    model.add(layers.Dense(1, activation='sigmoid')) # output layer
     model.compile(optimizer="adam", loss="mse")  
 
     return model
@@ -56,11 +56,11 @@ def tournament_selection(fitness, tournament_s):
     # tournament_s: tournament size
 
     idx = np.arange(len(fitness))
-    # seleccionar aleatoriamente 'tournament_s' individuos sin repetición
+    # randomly select ‘tournament_s’ individuals without repetition
     tournament = np.random.choice(idx, size=tournament_s, replace=False)
     
-    # devolver el índice del mejor individuo en el torneo
-    winner = tournament[fitness[tournament].argmax()]  # usar argmax si fitness=mayor es mejor
+    # return best induvidual's index
+    winner = tournament[fitness[tournament].argmax()]  
     return winner
 
 def get_operators(population,crossover_p, mutation_p, replication_p):
